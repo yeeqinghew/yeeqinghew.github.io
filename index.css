@@ -1,16 +1,19 @@
 :root {
 	--text-body: 22px;
-	--font-family-sans-serif: "DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	--font-family-sans-serif: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 html {
 	background-color: #fef9f8;
 	font-family: var(--font-family-sans-serif);
 }
+
 body {
 	font-size: var(--text-body);
 	margin: 0 auto;
 	width: 1200px;
 }
+
 footer {
 	text-align: center;
 	margin: 0;
@@ -18,70 +21,90 @@ footer {
 	height: fit-content;
 	padding: 10px;
 }
+
+h2,
+h3,
+p,
+.project,
+li {
+	animation: fade linear both;
+	animation-timeline: view();
+	animation-range: entry 50% cover 50%;
+}
+
 ul li a {
 	color: black;
 	text-decoration: none;
 }
+
 ul li img {
 	border-radius: 0.375rem;
 }
+
 a.button:hover {
 	color: #000000;
 	background-color: #FFFFFF;
 }
+
 .nav {
 	list-style-type: none;
 }
+
 .nav li {
 	font-weight: 300;
 	font-family: 'Roboto', sans-serif;
 	display: inline-block;
 	margin-left: 30px;
 }
+
 #projects .project {
 	background-color: white;
-	box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 	display: inline-block;
 	height: fit-content;
 	border-radius: 24px;
 	overflow: hidden;
-    transition: transform 0.5s;
-    -webkit-transition: transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition: transform 0.5s;
 }
+
 #projects .project:hover {
-	cursor: pointer;
 	transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 }
-#skills-content section {
-	display: inline-block;
-	vertical-align: top;
-}
+
 #skills-content {
 	border-radius: 24px;
 	padding: 48px;
 	background-color: white;
 	margin: 0 auto;
 }
+
 #skills-content ul {
-    column-gap: 20px;
-    padding-left: 0;
+	column-gap: 20px;
+	padding-left: 0;
 }
+
 #skills-content li {
 	list-style-type: none;
+	display: inline;
 	margin: 16px;
 }
+
 #get-in-touch-content a {
 	margin: 10px;
 	color: black;
 }
+
 .content {
 	margin: 0 auto;
 }
+
 #timeline-content {
 	margin-top: 50px;
 	text-align: center;
-  }
+}
+
 /* Timeline */
 .timeline {
 	border-left: 4px solid #E3BC9A;
@@ -99,34 +122,40 @@ a.button:hover {
 	font-weight: 100;
 	max-width: 75%;
 }
+
 .timeline h1 {
 	letter-spacing: 1.5px;
 	font-weight: 100;
 	font-size: 1.4em;
 }
+
 .timeline h2,
 .timeline h3 {
 	letter-spacing: 1.5px;
 	font-weight: 400;
 	font-size: 1.4em;
 }
+
 .timeline .event {
 	border-bottom: 1px dashed beige;
 	padding-bottom: 25px;
 	margin-bottom: 50px;
 	position: relative;
 }
+
 .timeline .event:last-of-type {
 	padding-bottom: 0;
 	margin-bottom: 0;
 	border: none;
 }
+
 .timeline .event:before,
 .timeline .event:after {
 	position: absolute;
 	display: block;
 	top: 0;
 }
+
 .timeline .event:before {
 	left: -217.5px;
 	color: beige;
@@ -136,6 +165,7 @@ a.button:hover {
 	font-size: 0.9em;
 	min-width: 120px;
 }
+
 .timeline .event:after {
 	box-shadow: 0 0 0 4px #E3BC9A;
 	left: -57.85px;
@@ -146,49 +176,73 @@ a.button:hover {
 	content: "";
 	top: 5px;
 }
-  
-@media (min-width: 1336px) { /* min-content: 1080px, margin: 128px */
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@media (min-width: 1336px) {
+
+	/* min-content: 1080px, margin: 128px */
 	#header {
 		margin: 48px 48px 24px 48px;
 		top: 48px;
 		right: 0;
 		height: 120px;
 	}
-	#title, #menu {
+
+	#title,
+	#menu {
 		position: absolute;
 	}
+
 	#title {
 		left: 96px;
 	}
+
 	#menu {
 		right: 96px;
 	}
+
 	#title img {
 		width: 100px;
 		height: 100px;
 	}
+
 	#fold {
 		margin: 0 96px;
 	}
+
 	#about-me {
 		padding: 150px 96px;
 		height: fit-content;
 	}
+
 	#experiences {
 		padding: 96px 96px;
 		height: fit-content;
 	}
+
 	#projects {
 		padding: 72px 96px;
 		height: fit-content;
 	}
+
 	#skills {
 		padding: 56px 96px;
 		height: fit-content;
 	}
+
 	#fold {
 		text-align: center;
 	}
+
 	#fold h1,
 	#fold p,
 	#about-me h2,
@@ -198,98 +252,121 @@ a.button:hover {
 	#get-in-touch h2 {
 		margin: 36px;
 	}
+
 	#about-me figure,
-	#about-me .text{
+	#about-me .text {
 		display: inline-block;
 	}
+
 	#fold figure img {
 		width: 25%;
 		height: 50%;
 	}
+
 	#about-me {
 		vertical-align: middle;
 	}
+
 	#about-me-content {
 		display: flex;
 		align-items: center;
 		margin: 96px 48px;
 	}
+
 	#about-me figure img {
 		border-radius: 50%;
 		border: 1px solid black;
 		width: 300px;
 		height: 300px;
 	}
+
 	#about-me .text {
 		margin-left: 24px;
 		width: 650px;
 	}
+
 	.divider {
 		width: 100%;
 		height: 48px;
 	}
+
 	#projects .project {
 		width: 400px;
 		padding: 24px;
 		margin: 24px 16px;
 	}
+
 	#projects img {
 		width: 380px;
 		height: 250px;
 	}
-	#skills-content section {
-		width: 400px;
-	}
 }
-@media (min-width: 980px) and (max-width: 1335.9px) { /* min-content: 800px, margin: 90px */
+
+@media (min-width: 980px) and (max-width: 1335.9px) {
+
+	/* min-content: 800px, margin: 90px */
 	body {
 		width: 800px;
 	}
+
 	#header {
 		margin: 48px 48px 24px 48px;
 		top: 48px;
 		right: 0;
 		height: 120px;
 	}
-	#title, #menu {
+
+	#title,
+	#menu {
 		position: absolute;
 	}
+
 	#title {
 		left: 48px;
 	}
+
 	#menu {
 		right: 48px;
 	}
+
 	#title img {
 		width: 100px;
 		height: 100px;
 	}
+
 	#fold {
 		margin: 0 96px;
 	}
+
 	#about-me {
 		padding: 130px 24px;
 		height: fit-content;
 	}
+
 	#experiences {
 		padding: 120px 24px;
 		height: fit-content;
 	}
+
 	#projects {
 		padding: 48px 24px;
 		height: fit-content;
 	}
+
 	#skills {
 		padding: 96px 24px;
 		height: fit-content;
 	}
+
 	#fold {
 		text-align: center;
 	}
+
 	#projects {
 		padding: 120px 24px;
-		height:  fit-content;
+		height: fit-content;
 	}
+
 	#fold h1,
 	#fold p,
 	#about-me h2,
@@ -299,76 +376,97 @@ a.button:hover {
 	#get-in-touch h2 {
 		margin: 36px;
 	}
+
 	#about-me figure,
-	#about-me .text{
+	#about-me .text {
 		display: inline-block;
 	}
+
 	#fold figure img {
 		width: 35%;
 		height: 35%;
 	}
+
 	#about-me {
 		vertical-align: middle;
 	}
+
 	#about-me-content {
 		display: flex;
 		align-items: center;
 		margin: 96px 24px;
 	}
+
 	#about-me figure img {
 		border-radius: 50%;
 		border: 1px solid black;
 		width: 250px;
 		height: 250px;
 	}
+
 	#about-me .text {
 		margin-left: 24px;
 		width: 650px;
 	}
+
 	.divider {
 		width: 100%;
 		height: 36px;
 	}
+
 	#projects .project {
 		width: 280px;
 		padding: 24px;
 		margin: 24px 16px;
 	}
+
 	#projects img {
 		width: 280px;
 		height: 120px;
 	}
+
 	#skills-content section {
 		display: block;
 	}
 }
-@media (min-width: 768px) and (max-width: 979.9px) { /* min-content: 640px, margin: 64px */
+
+@media (min-width: 768px) and (max-width: 979.9px) {
+
+	/* min-content: 640px, margin: 64px */
 	body {
 		width: 680px;
 		font-size: 18px;
 	}
+
 	#header {
 		margin: 48px 48px 24px 48px;
 		top: 48px;
 		right: 0;
 		height: 120px;
 	}
-	#title, #menu {
+
+	#title,
+	#menu {
 		position: absolute;
 	}
+
 	#title {
 		left: 48px;
 	}
+
 	#menu {
 		right: 48px;
 	}
+
 	#title img {
 		width: 100px;
 		height: 100px;
 	}
+
 	#fold {
 		margin: 0 96px;
 	}
+
 	#about-me,
 	#experiences,
 	#skills,
@@ -376,13 +474,16 @@ a.button:hover {
 		padding: 88px 24px;
 		height: fit-content;
 	}
+
 	#fold {
 		text-align: center;
 	}
+
 	#projects {
 		padding: 88px 24px;
-		height:  fit-content;
+		height: fit-content;
 	}
+
 	#fold h1,
 	#fold p,
 	#about-me h2,
@@ -392,92 +493,116 @@ a.button:hover {
 	#get-in-touch h2 {
 		margin: 36px;
 	}
+
 	#about-me figure,
-	#about-me .text{
+	#about-me .text {
 		display: inline-block;
 	}
+
 	#fold figure img {
 		width: 35%;
 		height: 35%;
 	}
+
 	#about-me {
 		vertical-align: middle;
 	}
+
 	#about-me-content {
 		display: flex;
 		align-items: center;
 		margin: 48px 24px;
 	}
+
 	#about-me figure img {
 		border-radius: 50%;
 		border: 1px solid black;
 		width: 180px;
 		height: 180px;
 	}
+
 	#about-me .text {
 		margin-left: 24px;
 		width: 650px;
 	}
+
 	.divider {
 		width: 100%;
 		height: 24px;
 	}
+
 	#projects .project {
 		width: 230px;
 		padding: 24px;
 		margin: 24px 16px;
 	}
+
 	#projects img {
 		width: 230px;
 		height: 120px;
 	}
+
 	#skills-content section {
 		display: block;
 	}
+
 	.timeline {
 		line-height: 0.4em;
 		font-size: 0.5em;
 		padding: 20px;
 		max-width: 75%;
 	}
+
 	.timeline h1 {
 		font-size: 0.4em;
 	}
-	.timeline h2,
+
 	.timeline h3 {
 		font-size: 0.4em;
 	}
 }
-@media (max-width: 767.9px) { /* min-content: 280px, margin: 20px */
+
+@media (max-width: 767.9px) {
+
+	/* min-content: 280px, margin: 20px */
 	body {
 		width: 360px;
 		font-size: 12px;
 	}
+
 	#header {
 		margin: 48px 24px;
 		top: 48px;
 		right: 0;
 		height: 120px;
 	}
+
 	#header .nav {
 		margin-top: 30px;
 	}
-	#title, #menu {
+
+	#title,
+	#menu {
 		position: absolute;
 	}
+
 	#title {
 		left: 24px;
 	}
+
 	#menu {
 		right: 24px;
 	}
+
 	#title img {
 		width: 80px;
 		height: 80px;
 	}
+
 	#fold {
 		margin: 48px 16px;
 	}
+
 	#about-me,
 	#experiences,
 	#skills,
@@ -485,13 +610,16 @@ a.button:hover {
 		padding: 48px 16px;
 		height: fit-content;
 	}
+
 	#fold {
 		text-align: center;
 	}
+
 	#projects {
 		padding: 48px 24px;
-		height:  fit-content;
+		height: fit-content;
 	}
+
 	#fold h1,
 	#fold p,
 	#about-me h2,
@@ -501,71 +629,84 @@ a.button:hover {
 	#get-in-touch h2 {
 		margin: 36px;
 	}
+
 	#fold figure img {
 		width: 50%;
 		height: 35%;
 	}
+
 	#about-me {
 		vertical-align: middle;
 	}
+
 	#about-me-content {
 		align-items: center;
 		margin: 16px;
 	}
+
 	#about-me figure {
 		text-align: center;
 	}
+
 	#about-me figure img {
 		border-radius: 50%;
 		border: 1px solid black;
 		width: 150px;
 		height: 150px;
 	}
+
 	#about-me .text {
 		margin-left: 24px;
 		width: fit-content;
 	}
+
 	.divider {
 		width: 100%;
 		height: 24px;
 	}
+
 	#projects .project {
 		width: 270px;
 		padding: 24px;
 		margin: 24px 0;
 	}
+
 	#projects img {
 		width: 230px;
 		height: 120px;
 	}
+
 	#skills-content ul {
-	    column-gap: 8px;
-	    padding-left: 0;
+		column-gap: 8px;
+		padding-left: 0;
 	}
+
 	#skills-content section {
 		display: block;
 	}
+
 	footer p {
 		margin: 10px auto;
 		width: 250px;
 	}
+
 	#get-in-touch-content a {
 		width: 36px;
 		height: 36px;
 	}
+
 	.timeline {
 		line-height: 0.4em;
-		font-size: 0.5em;
+		font-size: 0.6em;
 		padding: 20px;
 		max-width: 75%;
 	}
+
 	.timeline h1 {
-		font-size: 0.4em;
+		font-size: 0.6em;
 	}
-	.timeline h2,
+
 	.timeline h3 {
-		font-size: 0.4em;
+		font-size: 0.6em;
 	}
 }
-
-  
